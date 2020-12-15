@@ -9,4 +9,18 @@ class RoomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Room
-        fields = ("name", "price", "bedrooms", "bathrooms", "instant_book", "user")
+        fields = (
+            "pk",
+            "name",
+            "price",
+            "bedrooms",
+            "bathrooms",
+            "instant_book",
+            "user",
+        )
+
+
+class BigRoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        exclude = ()
